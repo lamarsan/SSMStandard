@@ -1,3 +1,3 @@
 # SSMStandard
 
-###Spring5+Mybatis 搭建完整的SSM框架
+Spring5+Mybatis 搭建完整的SSM框架
