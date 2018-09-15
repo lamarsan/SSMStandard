@@ -1,6 +1,6 @@
-package com.test.service;
+package com.example.service;
 
-import com.test.entity.UserEntity;
+import com.example.entity.UserEntity;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
-package com.test.controller;
+package com.example.controller;
 
-import com.test.commons.Config;
-import com.test.entity.UserEntity;
-import com.test.service.UserService;
+import com.example.commons.Config;
+import com.example.entity.UserEntity;
+import com.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +17,7 @@ public class TestController {
 
     @RequestMapping("/")
     public String test() {
-        return "test";
+        return "example";
     }
     @ResponseBody
     @RequestMapping("/a")

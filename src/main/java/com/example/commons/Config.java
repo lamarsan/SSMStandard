@@ -1,4 +1,4 @@
-package com.test.commons;
+package com.example.commons;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

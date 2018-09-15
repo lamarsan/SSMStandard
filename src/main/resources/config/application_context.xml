@@ -12,7 +12,7 @@
 			            http://mybatis.org/schema/mybatis-spring.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
 
-    <context:component-scan base-package="com.test.*"/>
+    <context:component-scan base-package="com.example.*"/>
 
     <!--JAVA常量-->
     <context:property-placeholder location="classpath:config/config.properties" ignore-unresolvable="true"/>
@@ -20,7 +20,7 @@
     <context:property-placeholder location="classpath:config/db.properties" ignore-unresolvable="true"/>
 
     <!--Mybatis 配置-->
-    <mybatis:scan base-package="com.test.dao"/>
+    <mybatis:scan base-package="com.example.dao"/>
 
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
           init-method="init" destroy-method="close">
@@ -63,12 +63,12 @@
         <!-- 自动扫描mapping.xml文件 -->
         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
         <!--@Alias注释扫描 可以配置到 mybatis-config.xml 中-->
-        <!--<property name="typeAliasesPackage" value="com.test.entity"/>-->
+        <!--<property name="typeAliasesPackage" value="com.exampleple.entity"/>-->
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
-        <property name="basePackage" value="com.test.dao"/>
+        <property name="basePackage" value="com.example.dao"/>
     </bean>
 
     <!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->

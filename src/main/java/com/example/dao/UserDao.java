@@ -1,6 +1,6 @@
-package com.test.dao;
+package com.example.dao;
 
-import com.test.entity.UserEntity;
+import com.example.entity.UserEntity;
 
 import java.util.List;
 

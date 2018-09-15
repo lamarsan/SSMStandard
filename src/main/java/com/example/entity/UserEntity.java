@@ -1,8 +1,6 @@
-package com.test.entity;
+package com.example.entity;
 
 import org.apache.ibatis.type.Alias;
-
-import java.sql.Timestamp;
 
 @Alias("User")
 public class UserEntity {

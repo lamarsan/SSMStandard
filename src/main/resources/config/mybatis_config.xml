@@ -17,6 +17,6 @@
         <setting name="logImpl" value="STDOUT_LOGGING"/>
     </settings>
     <typeAliases>
-        <package name="com.test.entity"/>
+        <package name="com.example.entity"/>
     </typeAliases>
 </configuration>
