@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.test.dao.UserDao">
+    <select id="selectAll" resultType="User">
+        select *
+        from user
+    </select>
+    <insert id="insert" parameterType="User">
+        INSERT INTO user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">ID,</if>
+            <if test="username != null">USERNAME,</if>
+            <if test="password != null">PASSWORD,</if>
+            <if test="nickname != null">NICKNAME,</if>
+            <if test="createTime != null">CREATE_TIME,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="username != null">#{username},</if>
+            <if test="password != null">#{password},</if>
+            <if test="nickname != null">#{nickname},</if>
+            <if test="createTime != null">#{createTime},</if>
+        </trim>
+    </insert>
+
+
+    <update id="update" parameterType="User">
+        UPDATE user
+        <set>
+            <if test="id != null">ID=#{id},</if>
+            <if test="username != null">USERNAME=#{username},</if>
+            <if test="password != null">PASSWORD=#{password},</if>
+            <if test="nickname != null">NICKNAME=#{nickname},</if>
+            <if test="createTime != null">CREATE_TIME=#{createTime},</if>
+        </set>
+        WHERE ID = #{id}
+    </update>
+
+    <!--如果要自己写映射关系就需要使用这段注释，如使用驼峰对应，就用mybatis-config中的配置-->
+    <!--&lt;!&ndash; 通过<resultMap>映射实体类属性名和表的字段名对应关系 &ndash;&gt;-->
+    <!--<resultMap id="UserMapping" type="User" >-->
+    <!--&lt;!&ndash; id属性来映射主键字段 &ndash;&gt;-->
+    <!--<id column="id" property="id"/>-->
+    <!--&lt;!&ndash; result属性映射非主键字段 &ndash;&gt;-->
+    <!--<result column="USERNAME" property="username"/>-->
+    <!--<result column="PASSWORD" property="password"/>-->
+    <!--<result column="NICKNAME" property="nickname"/>-->
+    <!--<result column="CREATE_TIME" property="createTime"/>-->
+    <!--</resultMap>-->
+</mapper>
