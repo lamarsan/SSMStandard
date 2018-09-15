@@ -17,7 +17,7 @@ public class TestController {
 
     @RequestMapping("/")
     public String test() {
-        return "example";
+        return "test";
     }
     @ResponseBody
     @RequestMapping("/a")
