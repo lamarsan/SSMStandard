@@ -136,7 +136,7 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
         </dependency>
-            <!--web则对远程调用和远程服务的支持,webmvc主要是对mvc的支持，包括restful协议-->
+        <!--web则对远程调用和远程服务的支持,webmvc主要是对mvc的支持，包括restful协议-->
         <!--Spring websocket：提供 Socket通信， web端的推送功能-->
         <dependency>
             <groupId>org.springframework</groupId>

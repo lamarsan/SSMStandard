@@ -18,7 +18,6 @@
     <context:property-placeholder location="classpath:config/config.properties" ignore-unresolvable="true"/>
     <!--dataSource参数文件-->
     <context:property-placeholder location="classpath:config/db.properties" ignore-unresolvable="true"/>
-
     <!--Mybatis 配置-->
     <mybatis:scan base-package="com.example.dao"/>
 
